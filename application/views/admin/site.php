@@ -216,7 +216,7 @@
 
 							<div style="font-weight:bold;color:red;font-size:11px;">
 							&nbsp;&nbsp;&nbsp;Currently, this only locks down the interface and not the API. Only enabling this feature will not<br/>
-							&nbsp;&nbsp;&nbsp;protect your data and your approved reports will still be accessible via the API!</div><div style="clear:both;"></div>
+							&nbsp;&nbsp;&nbsp;protect your data. Reports will still be able to be created and accessed via the API!</div><div style="clear:both;"></div>
 
 						</div>
 						<div class="row">
