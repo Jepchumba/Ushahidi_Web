@@ -302,12 +302,13 @@ final class Api_Service {
 		// Load the base API library
 		require_once Kohana::find_file('libraries/api', 'Api_Object');
 
-		// Get the task handler (from the api config file) for the requested task    
+		// Get the task handler (from the api config file) for the requested task
 		$task_handler = $this->_get_task_handler(strtolower($this->task_name));
 
 		$task_library_found = FALSE;
 
 		// Check if handler has been set   
+		// Moove $task_handler check into _get_task_handler
 		if (isset($task_handler))
 		{
 			// Check if the handler is an array
@@ -327,7 +328,7 @@ final class Api_Service {
 				// Perform the requested task
 				$this->api_object->perform_task();
 			}
-                
+
 			// Set the response data
 			$this->response = $this->api_object->get_response_data();
 
@@ -562,6 +563,15 @@ final class Api_Service {
 				return FALSE;
 			}
 		}
+		
+		// Modify this to check
+		// 1. is this task public?
+		
+		
+		// 2. is this action public?
+		
+		
+		// -> if no is the user logged in?
 
 		// STEP 2: Check if the IP has been banned
 		$banned_count = ORM::factory('api_banned')
